@@ -1,27 +1,60 @@
-/*Dikerjakan oleh Gaby*/
+// Dikerjakan oleh Rania
 
+// Membuat popup pada awal web
+Swal.fire({
+	imageUrl:"Foto kelompok.jpg",
+	imageWidth: 400,
+	imageHeight: 300,
+	showCloseButton:"true",
+	title:"Selamat Datang",
+	text:"Terima kasih telah mengunjungi website kami!",
+	confirmButtonText:"Tutup"
+});
 
-//Memastikan hanya bagian yang termasuk pada id 'Hacking' yang terlihat
-function open1() {
-	document.getElementById("UU").style.display = "none"; //Menghilangkan bagian dengan id 'UU'
-	document.getElementById("Hacking").style.display = "block"; //Memunculkan bagian dengan id 'Hacking'
-	document.getElementById("Kasus").style.display = "none"; //Menghilangkan bagian dengan id 'Kasus'
-
+// Membuat popup setelah memencet tombol Hacking
+function hacking(){
+Swal.fire({
+  title: "Menuju halaman Button Hacking",
+  text: "Anda akan diarahkan ke halaman Button Hacking",
+  icon: "info",
+  confirmButtonText: "Lanjutkan",
+}).then((result) => {
+	if (result.isConfirmed) {
+		window.location.assign("Hacking/index.html");
+	}
+});
 }
 
-//Memastikan hanya bagian yang termasuk pada id 'UU' yang terlihat
-function open2() {
-	document.getElementById("UU").style.display = "block"; //Memunculkan bagian dengan id 'UU'
-	document.getElementById("Hacking").style.display = "none"; //Menghilangkan bagian dengan id 'Hacking'
-	document.getElementById("Kasus").style.display = "none";  //Menghilangkan bagian dengan id 'Kasus'
+// Membuat popup setelah memencet tombol Photobooth
+function photobooth(){
+Swal.fire({
+  title: "Menuju halaman Photobooth",
+  text: "Anda akan diarahkan ke halaman Photobooth",
+  icon: "info",
+  confirmButtonText: "Lanjutkan",
+}).then((result) => {
+	if (result.isConfirmed) {
+		window.location.assign("Photobooth/index.html");
+	}
+});
 }
 
-//Memastikan hanya bagian yang termasuk pada id 'Kasus' yang terlihat
-function open3() {
-	document.getElementById("UU").style.display = "none"; //Menghilangkan bagian dengan id 'UU'
-	document.getElementById("Hacking").style.display = "none"; //Menghilangkan bagian dengan id 'Hacking'
-	document.getElementById("Kasus").style.display = "block"; //Memunculkan bagian dengan id 'Kasus'
+// Membuat popup setelah memencet tombol Gallery
+function gallery(){
+Swal.fire({
+  title: "Menuju halaman Gallery",
+  text: "Anda akan diarahkan ke halaman Gallery",
+  icon: "info",
+  confirmButtonText: "Lanjutkan",
+}).then((result) => {
+	if (result.isConfirmed) {
+		window.location.assign("Gallery/index.html");
+	}
+});
 }
+
+
+// Dikerjakan oleh Gaby
 
 // Menetapkan variabel dark
 let dark = localStorage.getItem('dark')
